@@ -1,0 +1,130 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import "minima";
+
+.site-header {
+  height: 50vh;
+  border: none;
+  background-image: linear-gradient(135deg, #7b8fe6 0%, #411679 100%);
+  color: white;
+
+  .site-nav-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    .site-nav {
+      .trigger {
+        margin-right: 20px;
+      }
+
+      .page-link {
+        color: white;
+        font-weight: 100;
+        letter-spacing: 2px;
+      }
+    }
+  }
+
+  .get-app-wrapper {
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-end;
+
+    .download-button {
+      position: relative;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: #b8e986;
+	    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+      transition: transform .12s ease-in-out,color .12s ease-in-out;
+
+      &:hover{
+        transform: scale(1.1);
+
+        &::before {
+          font-size: 22px;
+        }
+      }
+
+      &::before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font: normal normal normal 18px/1 FontAwesome;
+        content: "\f0ed";
+        color: #417505;
+      }
+    }
+
+    .version {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 18px;
+      margin-left: 10px;
+      font-weight: 100;
+    }
+  }
+}
+
+.title-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.logo {
+  position: relative;
+  float: left;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+  margin-right: 20px;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font: normal normal normal 14px/1 FontAwesome;
+    content: "\F0E7";
+  }
+}
+
+h1, h2 {
+  position: relative;
+  text-align: center;
+  font-weight: 100;
+  letter-spacing: 4.5px;
+  margin: 0;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.beta {
+  margin-left: 20px;
+  color: hsl(354, 100%, 69%);
+  letter-spacing: 1px;
+}
+
+.preview-screens {
+  margin-bottom: 26px;
+}
+
+.preview-screen {
+  width: 243px;
+  height: auto;
+}
